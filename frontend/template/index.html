@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>amazona</title>
+        <link rel="stylesheet" type="text/css" href="style.css">
+    </head>
+
+    <body>
+       <div class="grid-container">
+            <header class="header">
+                <div class="brand">
+                    <button class="brand-button" onclick="openMenu()">
+                        &#9776;
+                    </button>
+                    <a href="index.html">amazona</a>
+                </div>
+
+                <div class="header-links">
+                    <a href="cart.html">Cart</a>
+                    <a href="signin.html">Sign In</a>
+                </div>
+            </header>
+
+            <aside class="sidebar">
+                <h3>Categories</h3>
+                <button class="sidebar-close-button" onclick="closeMenu()">X</button>
+                <li>
+                    <a href="index.html">Pants</a>
+                </li>
+
+                <li>
+                    <a href="index.html">Shirts</a>
+                </li>
+
+            </aside>
+
+            <main class="main">
+                <div class="content">
+                    <ul class="products">
+                        <li>
+                            <div class="product">
+                                <img class="product-image" src="./images/slim-shirt.jpg" alt="image"/>
+                                <span class="product-name"><a href="/">Slim shirt</a></span>
+                                <span class="product-brand">Nike</span>
+                                <span class="product-price">$50</span>
+                                <span class="product-rating">5 Stars (10 reviews)</span>
+                            </div>
+                        </li>
+
+                        <li>
+                            <div class="product">
+                                <img class="product-image" src="./images/slim-shirt.jpg" alt="image"/>
+                                <span class="product-name"><a href="/">Slim shirt</a></span>
+                                <span class="product-brand">Nike</span>
+                                <span class="product-price">$50</span>
+                                <span class="product-rating">5 Stars (10 reviews)</span>
+                            </div>
+                        </li>
+
+                        <li>
+                            <div class="product">
+                                <img class="product-image" src="./images/slim-shirt.jpg" alt="image"/>
+                                <span class="product-name"><a href="/">Slim shirt</a></span>
+                                <span class="product-brand">Nike</span>
+                                <span class="product-price">$50</span>
+                                <span class="product-rating">5 Stars (10 reviews)</span>
+                            </div>
+                        </li>
+
+                        <li>
+                            <div class="product">
+                                <img class="product-image" src="./images/slim-shirt.jpg" alt="image"/>
+                                <span class="product-name"><a href="/">Slim shirt</a></span>
+                                <span class="product-brand">Nike</span>
+                                <span class="product-price">$50</span>
+                                <span class="product-rating">5 Stars (10 reviews)</span>
+                            </div>
+                        </li>
+
+                        <li>
+                            <div class="product">
+                                <img class="product-image" src="./images/slim-shirt.jpg" alt="image"/>
+                                <span class="product-name"><a href="/">Slim shirt</a></span>
+                                <span class="product-brand">Nike</span>
+                                <span class="product-price">$50</span>
+                                <span class="product-rating">5 Stars (10 reviews)</span>
+                            </div>
+                        </li>
+
+                        <li>
+                            <div class="product">
+                                <img class="product-image" src="./images/slim-shirt.jpg" alt="image"/>
+                                <span class="product-name"><a href="/">Slim shirt</a></span>
+                                <span class="product-brand">Nike</span>
+                                <span class="product-price">$50</span>
+                                <span class="product-rating">5 Stars (10 reviews)</span>
+                            </div>
+                        </li>
+
+                        <li>
+                            <div class="product">
+                                <img class="product-image" src="./images/slim-shirt.jpg" alt="image"/>
+                                <span class="product-name"><a href="/">Slim shirt</a></span>
+                                <span class="product-brand">Nike</span>
+                                <span class="product-price">$50</span>
+                                <span class="product-rating">5 Stars (10 reviews)</span>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                
+            </main>
+    
+            <footer class="footer">
+                all right reserved
+            </footer>
+       </div>
+
+       <script>
+           function openMenu(){
+
+               document.querySelector(".sidebar").classList.add("open")
+           }
+
+           function closeMenu(){
+            document.querySelector(".sidebar").classList.remove("open")
+           }
+       </script>
+    </body>
+</html>
