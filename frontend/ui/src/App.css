@@ -243,3 +243,34 @@ margin-bottom: 1rem;
   background-color: #ffcc44;
 }
 
+.add-to-cart-disabled{
+  background-color: #808080;
+  color: #404040;
+  padding: 1rem;
+  border: .1rem #808080 solid;
+  border-radius: .5rem;
+  cursor: pointer;
+}
+
+.details-qty{
+  display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.details-qty h4{
+  margin: .5rem 5rem  .5rem 5rem;
+}
+
+.details-qty button{
+  border-radius: 40%;
+  background-color: #fff;
+
+  border-width: .1rem;
+  cursor: pointer;
+}
+
+.disabled{
+  border-color: #808080;
+  color: #808080;
+}
