@@ -40,7 +40,7 @@ export default function ProductPage() {
 
 
     const handleAddToCart = () => {
-            history.push(`cart/${id}?qty=${qty}`)
+            history.push(`/cart/${id}?qty=${qty}`)
     }
 
     

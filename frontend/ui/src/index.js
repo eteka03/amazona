@@ -8,12 +8,16 @@ import thunkMiddleware from 'redux-thunk'
 import {Provider} from 'react-redux'
 import {createLogger} from 'redux-logger'
 import {createStore,combineReducers, applyMiddleware} from 'redux'
-import { getProducts,detailsProduct } from './redux/reducers';
+import { getProducts,detailsProduct,cartReducer,userSigninReducer,userRegisterReducer } from './redux/reducers';
+import Cookie from 'js-cookie'
 
 
+const cartItems = Cookie.getJSON('cartItems') || []
+const userInfo = Cookie.getJSON('userInfo') || null
+const inital = {cartReducer:{cartItems},userSigninReducer:{userInfo}}
 const logger = createLogger()
-const rootReducers = combineReducers({getProducts,detailsProduct})
-const store = createStore(rootReducers,applyMiddleware(thunkMiddleware,logger))
+const rootReducers = combineReducers({getProducts,detailsProduct,cartReducer,userSigninReducer,userRegisterReducer})
+const store = createStore(rootReducers,inital,applyMiddleware(thunkMiddleware,logger))
 
 ReactDOM.render(
   <React.StrictMode>

@@ -1,6 +1,21 @@
 const express = require('express')
 
 const app = express()
+const env = require('dotenv')
+const config = require('./config')
+
+const mongoose = require('mongoose')
+const userRoute = require('./routes/userRoute')
+
+env.config()
+
+const mongodbUrl = config.MONGODB_URL
+
+mongoose.connect(mongodbUrl,{
+    useNewUrlParser:true,
+    useUnifiedTopology:true,
+    useCreateIndex:true
+}).catch(error =>console.log(error.reason))
 
 const fakeData = {
     products:[
@@ -42,6 +57,9 @@ const fakeData = {
         }
     ]
 }
+app.use(express.json())
+app.use('/users',userRoute)
+
 
 app.get('/',(req,res)=>{
     res.send('its working !')

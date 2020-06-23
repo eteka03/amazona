@@ -2,9 +2,14 @@ import React from 'react'
 import {
     Link
 } from 'react-router-dom'
-import HomePage from '../HomePage/HomePage'
+
+import {useSelector} from 'react-redux'
 
 export default function Header({ToggleMenu}) {
+
+    const signUser = useSelector(state => state.userSigninReducer)
+const {userInfo} = signUser
+
     return (
         <header className="header">
         <div className="brand">
@@ -19,7 +24,11 @@ export default function Header({ToggleMenu}) {
 
         <div className="header-links">
             <a href="cart.html">Cart</a>
-            <a href="signin.html">Sign In</a>
+            {
+                userInfo ? <Link to="/profile">{userInfo.name}</Link> :
+                            <Link to="/signin">Sign in</Link>
+            }
+         
         </div>
 
     </header>
